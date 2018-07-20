@@ -234,7 +234,6 @@ PRODUCT_PACKAGES += \
 
 # Wi-Fi
 PRODUCT_PACKAGES += \
-    libwcnss_qmi \
     wcnss_service
 
 PRODUCT_PACKAGES += \
@@ -351,10 +350,6 @@ PRODUCT_COPY_FILES += \
 # USB ID
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0
-
-# Wi-Fi
-PRODUCT_PACKAGES += \
-    libwcnss_qmi
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_cfg.dat \
