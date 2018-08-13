@@ -59,6 +59,7 @@ persist.vendor.audio.fluence.speaker=false
 ro.sf.lcd_density=320
 
 # Camera
+persist.vendor.qti.telephony.vt_cam_interface=1
 persist.camera.cpp.duplication=false
 persist.camera.hal.debug.mask=0
 
