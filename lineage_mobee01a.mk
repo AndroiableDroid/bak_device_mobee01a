@@ -1,4 +1,3 @@
-# Copyright (C) 2014 The CyanogenMod Project
 # Copyright (C) 2018 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,13 +14,13 @@
 
 $(call inherit-product, device/LYF/mobee01a/full_mobee01a.mk)
 
-# Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
-
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8939
 
-PRODUCT_NAME := aosp_mobee01a
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+PRODUCT_NAME := lineage_mobee01a
 BOARD_VENDOR := LYF
 PRODUCT_DEVICE := mobee01a
 
@@ -32,11 +31,10 @@ TARGET_GAPPS_ARCH := arm64
 TARGET_BOOT_ANIMATION_RES := 720
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="mobee01a_msm8916_64-user 6.0.1 MMB29M 701 release-keys" \
+    PRIVATE_BUILD_DESC="mobee01a_msm8916_64-user 9.0 PPR1.180610.011 release-keys" \
     PRODUCT_NAME=LS-5015 \
     TARGET_DEVICE=LS-5015
+	
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += ro.product.model
 
-BUILD_FINGERPRINT := LYF/LS-5015/LS-5015:6.0.1/MMB29M/434:user/release-keys
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS="Mohd Faraz (AndroiableDroid)"
+BUILD_FINGERPRINT := LYF/LS-5015/LS-5015:9.0/PPR1.180610/011:user/release-keys
